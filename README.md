@@ -15,12 +15,13 @@ This pattern is often called **One-to-Squillions**, where one document can be re
 In MongoDB, when one document has **many related documents**, it is more efficient to store the **reference in the child document** rather than embedding all the data.
 
 Example relationship:
-
+```
 User
-├── Post
-├── Post
-├── Post
-└── Post
+ └── Post
+ └── Post
+ └── Post
+ └── Post
+```
 
 Each **Post document stores the User's ObjectId**.
 
